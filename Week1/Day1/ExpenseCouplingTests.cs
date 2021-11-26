@@ -22,8 +22,6 @@ namespace Week1.Day1
         [Fact]
         public void ShouldTakeAwayFromTargetValueGivenNumber()
         {
-
-
             var result = _sut.ReminderOfTargetValueTakeawayFrom(500);
             
             Assert.Equal(1520, result);
@@ -68,6 +66,15 @@ namespace Week1.Day1
             var multipliedResult = result.firstValue * result.secondValue;
             
             Assert.Equal(902451, multipliedResult);
+        }
+        
+
+        [Fact]
+        public void ShouldReturnFalseGivenMoreThenOneOccuranceOfNumber()
+        {
+            var result = _sut.IsOneOccuranceOfNumber(143, 143);
+            
+            Assert.False(result);
         }
         
     }
