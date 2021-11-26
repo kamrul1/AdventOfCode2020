@@ -6,7 +6,6 @@ namespace Week1.Day1
 {
     public class ExpenseCoupling
     {
-        
         private readonly int _targetValue;
         private readonly int[] _expenses;
 
@@ -27,7 +26,7 @@ namespace Week1.Day1
                 var possibleSecondValue = ReminderOfTargetValueTakeawayFrom(firstValue);
 
                 if (IsOneOccuranceOfNumber(firstValue, possibleSecondValue)) continue;
-                
+
                 if (IsValueInArray(possibleSecondValue)) return (firstValue, possibleSecondValue);
             }
 
@@ -37,7 +36,7 @@ namespace Week1.Day1
         public bool IsOneOccuranceOfNumber(int firstValue, int possibleSecondValue)
         {
             if (firstValue != possibleSecondValue) return false;
-            
+
             var sameNumbers = _expenses.Where(x => x == possibleSecondValue).ToList();
 
             return sameNumbers.Count > 1;
